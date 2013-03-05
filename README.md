@@ -27,6 +27,6 @@ From two terminals run:
 ```sh
 ant build
 ```
-One instance will recieve the lock, print out "I got the lock"  and then sleep for 10 seconds. 
-The other instance will wait for about the seconds before it claims the lock.
+One instance will recieve the lock, print out "I got the lock" and then sleep for 10 seconds before releasing the lock. 
+The other instance will wait for about 10 seconds before it succeeds in claiming the lock.
 A file named "lock-sleep" while be created in the current directory. If any of the nestled task failes, the lock will be released. 
