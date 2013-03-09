@@ -13,7 +13,6 @@ Create a build.xml file with the following code:
 ```xml
 <project default="build">
   <taskdef name="lock" classname="com.simedw.ant.Lock"/>
-
   <target name="build">
     <lock name="sleep">
       <echo message="I got the lock"/>

@@ -31,6 +31,10 @@ public class Lock extends Task {
 	
 	@Override
 	public void execute() {
+		if(getName() == null) {
+			throw new BuildException("property \"name\" is not set");
+		}
+		
 		log("trying to aquiring lock \"" + getName() + "\"");
 		
 		createLock();
